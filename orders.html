@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout — Loopline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><a href="index.html">Loopline</a></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="testimoni.html">Testimoni</a>
+        <a class="active" href="orders.html">Checkout</a>
+      </nav>
+      <button class="hamburger" id="hamb-toggle" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <!-- MAIN CHECKOUT -->
+  <main class="container section">
+
+    <h2>Checkout Produk</h2>
+    <p>Isi data berikut untuk melakukan pemesanan. Setelah selesai, kamu akan diarahkan ke WhatsApp.</p>
+
+    <div class="checkout-box">
+
+      <label for="produk">Pilih Produk</label>
+      <select id="produk">
+        <option value="Pearly Glow Belt - Rp  115.000">Pearly Glow Belt - Rp  115.000</option>
+        <option value="Sweet Heart Belt - Rp 75.000">Sweet Heart Belt - Rp 75.000</option>
+        <option value="Tan Vintage Belt - Rp 89.000">Tan Vintage Belt - Rp 89.000"</option>
+        <option value="Trooper Strap Belt- Rp 65.000">LTrooper Strap Belt- Rp 65.000</option>
+      </select>
+
+      <label for="qty">Jumlah</label>
+      <input type="number" id="qty" min="1" value="1">
+
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" placeholder="Isi nama kamu">
+
+      <label for="alamat">Alamat Lengkap</label>
+      <textarea id="alamat" placeholder="Isi alamat kamu"></textarea>
+
+      <label for="catatan">Catatan (opsional)</label>
+      <textarea id="catatan" placeholder="Contoh: request packing, dll"></textarea>
+
+      <button class="btn-wa" onclick="checkoutWA()">Checkout via WhatsApp</button>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container foot-inner">
+      <div>© <span id="year5"></span> Loopline</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year5').textContent = new Date().getFullYear();
+
+    function checkoutWA() {
+      const produk = document.getElementById('produk').value;
+      const qty = document.getElementById('qty').value;
+      const nama = document.getElementById('nama').value;
+      const alamat = document.getElementById('alamat').value;
+      const catatan = document.getElementById('catatan').value;
+
+      if (!nama || !alamat) {
+        alert("Nama dan alamat wajib diisi!");
+        return;
+      }
+
+      const pesan = 
+`*PESANAN LOOPLINE*
+Produk: ${produk}
+Jumlah: ${qty}
+
+Nama: ${nama}
+Alamat: ${alamat}
+
+Catatan: ${catatan || "-"}
+`;
+
+      const nomorWA = "62857-2248-0959"; 
+
+      const url = "https://wa.me/" + nomorWA + "?text=" + encodeURIComponent(pesan);
+      window.open(url, "_blank");
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loopline — Products</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><a href="index.html">Loopline</a></div>
+      <nav class="nav-links" id="nav-links-2">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="testimoni.html">Testimoni</a>
+        <a href="orders.html">Orders</a>
+        <button class="cart-btn" id="open-cart-2">Cart (<span id="cart-count-2">0</span>)</button>
+      </nav>
+      <button class="hamburger" id="hamb-toggle-2" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="section-head">
+      <h2>Catalog</h2>
+      <input id="search" type="search" placeholder="Cari produk..." />
+    </div>
+
+    <div id="product-grid" class="grid"></div>
+  </main>
+
+  <!-- Cart drawer reused -->
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="drawer-head">
+      <h3>Keranjang</h3>
+      <button id="close-cart" class="close-btn">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="drawer-footer">
+      <div class="subtotal">Subtotal: <strong id="cart-subtotal">Rp 0</strong></div>
+      <div class="drawer-actions">
+        <a href="index.html#checkout" class="btn btn-block">Checkout</a>
+        <button id="checkout-whatsapp" class="btn btn-ghost">Order via WhatsApp</button>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container foot-inner">
+      <div>© <span id="year2"></span> Loopline</div>
+      <div>WA: <a id="wa-number2" href="#">08xxxxxxxxxx</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loopline — Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><a href="index.html">Loopline</a></div>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="testimoni.html">Testimoni</a>
+        <a href="orders.html">Orders</a>
+        <button class="cart-btn" id="open-cart">Cart (<span id="cart-count">0</span>)</button>
+      </nav>
+      <button class="hamburger" id="hamb-toggle" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / SLIDER -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-slider" id="hero-slider">
+          <div class="slide active" style="background-image:url('images/banner1.jpg')">
+            <div class="slide-content">
+              <h1>Pearly & Elegant</h1>
+              <p>Sabuk aksen mutiara untuk tampilan dressy & chic.</p>
+              <a href="products.html#pearly" class="btn">Lihat Produk</a>
+            </div>
+          </div>
+
+          <div class="slide" style="background-image:url('images/banner2.jpg')">
+            <div class="slide-content">
+              <h1>Casual Everyday</h1>
+              <p>Sabuk canvas & leather untuk aktivitas harian.</p>
+              <a href="products.html" class="btn">Browse Catalog</a>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button id="prev-slide">‹</button>
+            <div id="dots" class="dots"></div>
+            <button id="next-slide">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES / INFO CARDS -->
+    <section class="container features">
+      <div class="feature-card">
+        <h3>Premium Quality</h3>
+        <p>Produk original terpilih, finishing rapi.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Best Price</h3>
+        <p>Harga kompetitif tanpa mengorbankan kualitas.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Fast Delivery</h3>
+        <p>Pengiriman cepat ke seluruh Indonesia.</p>
+      </div>
+    </section>
+
+    <!-- PRODUCT PREVIEW -->
+    <section class="container section">
+      <div class="section-head">
+        <h2>Produk Terbaru</h2>
+        <a href="products.html" class="link-muted">Lihat Semua →</a>
+      </div>
+
+      <div id="home-product-grid" class="grid"></div>
+    </section>
+
+    <!-- ABOUT MINI -->
+    <section class="container about-mini">
+      <div class="about-inner">
+        <div class="about-img">
+          <img src="images/about.jpg" alt="tentang loopline" />
+        </div>
+        <div class="about-text">
+          <h2>Tentang Loopline</h2>
+          <p>Loopline menyediakan sabuk modern dengan sentuhan desain yang bersih dan elegan. Fokus kami pada kualitas bahan dan detail jahitan.</p>
+          <a href="about.html" class="btn btn-ghost">Selengkapnya</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CART DRAWER -->
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="drawer-head">
+      <h3>Keranjang</h3>
+      <button id="close-cart" class="close-btn">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="drawer-footer">
+      <div class="subtotal">Subtotal: <strong id="cart-subtotal">Rp 0</strong></div>
+      <div class="drawer-actions">
+        <a href="products.html" class="btn btn-block">Tambah Produk</a>
+        <button id="checkout-whatsapp" class="btn btn-ghost">Order via WhatsApp</button>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container foot-inner">
+      <div>© <span id="year"></span> Loopline</div>
+      <div>WA: <a id="wa-number" href="#">08xxxxxxxxxx</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

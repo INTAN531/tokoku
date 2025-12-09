@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Testimoni — Loopline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><a href="index.html">Loopline</a></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="testimoni.html">Testimoni</a>
+        <a href="orders.html">Orders</a>
+      </nav>
+      <button class="hamburger" id="hamb-toggle" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h2>Testimoni Pelanggan</h2>
+    <div class="testi-grid">
+      <blockquote class="testi">“Sabuknya bagus & packaging rapi. Recommended!” — Maya</blockquote>
+      <blockquote class="testi">“Nyaman dipakai dan cepat pengiriman.” — Rani</blockquote>
+      <blockquote class="testi">“Cantik, bikin outfit keliatan mahal.” — Sari</blockquote>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot-inner">
+      <div>© <span id="year4"></span> Loopline</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year4').textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+</body>
+</html>

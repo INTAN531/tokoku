@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Loopline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><a href="index.html">Loopline</a></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="testimoni.html">Testimoni</a>
+        <a href="orders.html">Orders</a>
+        <button class="cart-btn" id="open-cart">Cart (<span id="cart-count">0</span>)</button>
+      </nav>
+      <button class="hamburger" id="hamb-toggle" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h2>Tentang Loopline</h2>
+    <p>Loopline adalah toko lokal yang berfokus pada sabuk dengan desain minimal dan bahan yang tahan lama. Kami melayani pembelian individu dan grosir kecil.</p>
+    <h3>Visi</h3>
+    <p>Menjadi brand aksesoris yang dikenal untuk kualitas dan desain sederhana.</p>
+    <h3>Misi</h3>
+    <ul>
+      <li>Memberi produk berkualitas dengan harga terjangkau</li>
+      <li>Melayani pelanggan dengan cepat dan ramah</li>
+      <li>Tumbuh bersama komunitas lokal</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot-inner">
+      <div>© <span id="year3"></span>LoopLine. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+</body>
+</html>
